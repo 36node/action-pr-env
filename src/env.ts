@@ -4,7 +4,7 @@
  * @param text input string.
  * @returns {{[key:string]: string}} Resolves with a map of environment variables.
  */
-export function extract(text: string = ''): { [key: string]: string } {
+export function extract(text = ''): { [key: string]: string } {
   const regex = new RegExp(/\+env:(.*)=(.*)/g);
   const env: { [key: string]: string } = {};
   let results: RegExpExecArray | null;
